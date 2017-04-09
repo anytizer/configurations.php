@@ -13,7 +13,7 @@ Configurations read/write using SQLite for PHP
 
 # Usage example
 
-    $configurations = new configurations();
+    $configurations = new configurations("Group Name");
     
     $new_value = "777";
     $configurations->write("counter", $new_value);

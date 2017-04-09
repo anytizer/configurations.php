@@ -99,6 +99,7 @@ class configurations
 		$name = $this->namify($name);
 		
 		$sql="SELECT category category, name name, value value FROM configurations WHERE category=:category AND name=:name LIMIT 1;";
+		#echo $sql;
 		$replacement = array(
 			":category" => $this->category, 
 			":name" => $name, 
@@ -106,7 +107,7 @@ class configurations
 		
 		$result = $this->query($sql, $replacement, true);
         #print_r($result);
-        return $result[0]["value"]??"";
+        return $result[0]["value"]??null;
 	}
 
 	/**
@@ -188,9 +189,11 @@ class configurations
 		);
 		
 		$result = $this->query($sql, $replacement, true);
+        #print_r($result);
 
 		# MUST be ONE Record only (1)
-		$found = isset($result["total"])?$result["total"] >= 1:false;
+		$found = isset($result[0]["total"])?$result[0]["total"] >= 1:false;
+        echo "Found? ", $found?"true":"false";
 		
 		return $found;
 	}
