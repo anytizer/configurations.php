@@ -1,0 +1,2 @@
+<?php
+reqire_once();

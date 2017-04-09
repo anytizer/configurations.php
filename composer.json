@@ -1,0 +1,21 @@
+{
+	"name": "backend/configurations",
+	"type": "library",
+	"keywords": ["configurations", "properties"],
+    "description": "SQLite based Configurations Reader and Writer for PHP",
+	"authors": [
+		{
+			"role": "Developer"
+		}
+	]
+    "require": {
+        "php": "^7.0"
+    }
+	"prefer-stable": true,
+	"autoload": {
+        "psr-4": {
+            "backend\\": "src/configurations"
+        }
+    },
+	"target-dir": "backend/configurations"
+}

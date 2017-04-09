@@ -1,0 +1,17 @@
+tests\configurations\configurationsCleanup
+ [x] Cleanup
+
+tests\configurations\configurationsCreate
+ [x] Read invalid name
+ [x] New group
+
+tests\configurations\configurationsRead
+ [x] Read
+
+tests\configurations\configurationsUpdate
+ [x] Update
+
+tests\configurations\configurationsWrite
+ [x] Write
+ [ ] Write null
+
