@@ -107,7 +107,7 @@ class configurations
 		
 		$result = $this->query($sql, $replacement, true);
         #print_r($result);
-        return $result[0]["value"]??null;
+        return $result[0]["value"]??"";
 	}
 
 	/**
